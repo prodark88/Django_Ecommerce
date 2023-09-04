@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'category',
     'accounts',
     'store',
+    'carts',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +70,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 #context_processors  
                 'category.context_processors.menu_link',
-                
+                'carts.context_processors.counter',          
             ],
         },
     },
@@ -134,6 +135,13 @@ STATICFILES_DIRS= [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'media'
+
+
+#for messages errors
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
 
 
 
