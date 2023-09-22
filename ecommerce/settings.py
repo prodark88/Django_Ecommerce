@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'carts',
+    'orders',
+    'paypal.standard.ipn',
 ]
 
 MIDDLEWARE = [
@@ -143,11 +145,25 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
+""" EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST:"smtp.gmail.com"
+EMAIL_PORT: 587
+EMAIL_HOST_USER : 'kennethamolina899@gmail.com'
+EMAIL_HOST_PASSWORD : 'elmiocid789mio'
+EMAIL_USE_TLS: True """
 
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '57402abfb47fa1'
+EMAIL_HOST_PASSWORD = '858063048a4506'
+EMAIL_PORT = '2525'
+EMAIL_USE_TLS: True
 
-
+#Config paypal
+PAYPAL_RECEIVER_EMAIL = "kenneth-molina448@outlook.es"
+PAYPAL_TEST = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
