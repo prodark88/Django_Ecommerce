@@ -62,7 +62,8 @@ Para gestionar imágenes y otros archivos en la aplicación.
 Nivel: Básico a Intermedio
 Para renderizar HTML dinámicamente.
 
-## PostgreSQL: Elegimos PostgreSQL como nuestro sistema de gestión de bases de datos debido a su rendimiento y confiabilidad. Su soporte para características avanzadas y su capacidad para manejar grandes cantidades de datos lo convierten en una opción sólida para nuestra aplicación.
+# PostgreSQL: 
+Elegimos PostgreSQL como nuestro sistema de gestión de bases de datos debido a su rendimiento y confiabilidad. Su soporte para características avanzadas y su capacidad para manejar grandes cantidades de datos lo convierten en una opción sólida para nuestra aplicación.
 
 ### Justificación
 Django ofrece una estructura sólida para desarrollar aplicaciones web de manera eficiente y segura. 
