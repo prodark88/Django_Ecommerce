@@ -18,13 +18,51 @@
 - [Mencionar cualquier característica única o innovadora].
 
 ## Tecnologías Utilizadas
-Django: Utilizamos el framework de desarrollo web Django debido a su robustez y flexibilidad. Django proporciona una estructura sólida para construir aplicaciones web escalables y seguras.
-Además, su enfoque en la eficiencia del desarrollo nos permitió acelerar la creación de características clave.
+Django Framework:
+Nivel: Intermedio
+Django es un marco de desarrollo web de alto nivel que fomenta el desarrollo rápido y limpio. Has utilizado funciones como modelos, vistas, plantillas, formularios y administrador de Django.
+
+#HTML/CSS:
+Nivel: Básico a Intermedio
+Para la estructura y presentación de las páginas web.
+Bootstrap:
+
+Nivel: Básico a Intermedio
+Framework de diseño que proporciona estilos predefinidos y componentes para una apariencia más atractiva y responsiva.
+
+JavaScript y jQuery (posiblemente):
+Nivel: Básico a Intermedio
+Para mejorar la interactividad en el frontend.
+
+Python:
+Nivel: Intermedio
+El lenguaje principal de Django. Utilizando Python para la lógica de negocios y otras operaciones en el backend.
+
+Django ORM (Object-Relational Mapping):
+Nivel: Intermedio
+Para interactuar con la base de datos y realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en los modelos.
+
+Django Forms:
+Nivel: Intermedio
+Para manejar formularios en la aplicación web.
+
+Django Admin:
+Nivel: Básico
+Para proporcionar una interfaz administrativa preconstruida.
+
+Git:
+Nivel: Básico a Intermedio
+Para el control de versiones. Pudiste solucionar problemas de fusión y realizar un seguimiento de tus cambios.
+
+Manejo de Archivos Estáticos y Media en Django:
+Nivel: Básico a Intermedio
+Para gestionar imágenes y otros archivos en la aplicación.
+
+Django Templates:
+Nivel: Básico a Intermedio
+Para renderizar HTML dinámicamente.
 
 PostgreSQL: Elegimos PostgreSQL como nuestro sistema de gestión de bases de datos debido a su rendimiento y confiabilidad. Su soporte para características avanzadas y su capacidad para manejar grandes cantidades de datos lo convierten en una opción sólida para nuestra aplicación.
-
-GitHub: Utilizamos GitHub como nuestra plataforma de control de versiones y colaboración. 
-Facilita la colaboración entre miembros del equipo y el seguimiento de cambios en el código fuente. También aprovechamos las funciones de integración continua para automatizar pruebas y despliegues.
 
 ### Justificación
 Django ofrece una estructura sólida para desarrollar aplicaciones web de manera eficiente y segura. 
