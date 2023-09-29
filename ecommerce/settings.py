@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+#para la seguridad
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-gavq$u($$#afqwmp7#&g3dg7cpcn%(8x^*b$v4gut=$!rthovw'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool, default=True)
 
 ALLOWED_HOSTS = []
 
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'carts',
     'orders',
     'paypal.standard.ipn',
+    'admin_honeypot',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +57,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware'
 ]
+
+SESSION_EXPIRE_SECONDS = 3600
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+SESSION_TIMEOUT_REDIRECT = 'accounts/login'
 
 ROOT_URLCONF = 'ecommerce.urls'
 
@@ -152,12 +159,11 @@ EMAIL_HOST_USER : 'kennethamolina899@gmail.com'
 EMAIL_HOST_PASSWORD : 'elmiocid789mio'
 EMAIL_USE_TLS: True """
 
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = '57402abfb47fa1'
-EMAIL_HOST_PASSWORD = '858063048a4506'
-EMAIL_PORT = '2525'
-EMAIL_USE_TLS: True
-
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_PORT =  config('EMAIL_PORT',cast=int)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, cast=bool)
 #Config paypal
 PAYPAL_RECEIVER_EMAIL = "kenneth-molina448@outlook.es"
 PAYPAL_TEST = True

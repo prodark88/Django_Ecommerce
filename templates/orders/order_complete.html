@@ -46,7 +46,7 @@
                                         <li><strong>Orden</strong> {{ order.order_number}} </li>
                                         <li><strong>Transaccion</strong> {{ payer_id}} </li>
                                         <li><strong>Fecha de Orden:</strong> {{ order.updated_at }}</li>
-                                        <li><strong>Status:</strong> {{ payment.status }}</li>
+                                        <li><strong>Status:</strong> {{ order.status }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -64,22 +64,28 @@
                                         <tbody>
                                             {{ ordered_products}} 
                                             {{ variations.all }}
-                                            {% for item in ordered_products %}
-                                            <tr>
-                                                <td>
-                                                    {{ item.product.product_name }} 
-                                                    <p class="text-muted small">
-                                                        {% if item.variation.all %}
-                                                            {% for variation in item.variations.all %}
-                                                                {{ variation.variation_category_set.tallas }} : {{ variation.variation_value}}
-                                                            {% endfor %}
-                                                        {% endif %}
-                                                    </p>
-                                                </td>
-                                                <td class="text-center"> {{ item.quantity }} </td>
-                                                <td class="text-center">${{ item.product_price }} USD</td>
-                                            </tr>
+
+                                            {% for item in ordered_products %}s
+                                                <tr>
+                                                    <td>
+                                                        {{ item.product.product_name }} 
+                                                        <p class="color:black">
+                                                            <!-- falta corregir las variaciones -->
+                                                            {% if variation in item.variation.all %}
+                                                                    {% for i in item.variation.all %}
+                                                                <p>
+                                                                    Variation Category: {{ i.variation_category }}
+                                                                    Variation Value: {{ i.variation_value }}
+                                                                </p>
+                                                                    {% endfor %}
+                                                            {% endif %}
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-center"> {{ item.quantity }} </td>
+                                                    <td class="text-center">${{ item.product_price }} USD</td>
+                                                </tr>
                                             {% endfor %}
+    
                     
                                         </tbody>
                                         <tfoot>

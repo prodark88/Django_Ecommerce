@@ -71,6 +71,9 @@ class Account(AbstractBaseUser):
         verbose_name = 'Cuenta'
         verbose_name_plural = 'Cuentas'
 
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
     def __str__(self):
         return self.email
     
@@ -81,6 +84,22 @@ class Account(AbstractBaseUser):
 
     def has_module_perms(self, add_label):
         return True
+    
+class UserProfile(models.Model):
+    user = models.OneToOneField(Account, on_delete=models.CASCADE)
+    address_line1 = models.CharField(max_length=50, blank=True)
+    address_line2 = models.CharField(max_length=50, blank=True)
+    profile_picture = models.ImageField(blank=True, upload_to='userprofile')
+    city = models.CharField(blank=True, max_length=20)
+    state = models.CharField(blank=True, max_length=20)
+    country = models.CharField(blank=True, max_length=20)
 
+    def __str__(self) -> str:
+        return self.user.first_name
+    
+
+    def full_address(self):
+        return  f"{self.address_line1} {self.address_line2}"
+    
 
 
