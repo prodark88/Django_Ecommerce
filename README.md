@@ -13,9 +13,33 @@
 
 ## Características Clave
 
-- [Describir las características clave de manera concisa y atractiva].
-- [Destacar las ventajas competitivas].
-- [Mencionar cualquier característica única o innovadora].
+El proyecto es un sistema de comercio electrónico (e-commerce) desarrollado con Django, un marco de desarrollo web de Python. Características clave:
+
+#### Funcionalidad Completa: 
+Permite a los usuarios registrarse, navegar por productos, agregar artículos al carrito, realizar pedidos y gestionar perfiles de usuario.
+
+#### Diseño Responsivo:
+La interfaz de usuario es adaptable, brindando una experiencia de usuario consistente en una variedad de dispositivos, desde computadoras de escritorio hasta dispositivos móviles.
+
+#### Seguridad:
+Implementa medidas de seguridad como la autenticación de usuarios, manejo seguro de contraseñas y protección contra ataques CSRF.
+
+#### Gestión de Productos:
+Administra productos con información detallada, incluyendo imágenes, descripciones y precios.
+
+#### Procesamiento de Pedidos:
+Permite a los usuarios realizar pedidos, con un carrito de compras que sigue el estado del pedido y notifica sobre el progreso.
+
+#### Perfil de Usuario: 
+Los usuarios pueden crear y gestionar perfiles, incluyendo detalles de envío y preferencias.
+
+#### Administración del Sitio:
+Incluye un panel de administración de Django para gestionar productos, usuarios y pedidos de manera eficiente.
+
+#### Manejo de Errores y Alertas:
+Implementa mensajes de alerta para informar a los usuarios sobre acciones exitosas o errores.
+
+Este proyecto destaca las capacidades de Django para desarrollar aplicaciones web robustas y escalables, proporcionando una plataforma completa para la operación de un negocio en línea.
 
 ## Tecnologías Utilizadas
 ### Django Framework:
@@ -86,11 +110,15 @@ Inicia el servidor de desarrollo para ejecutar la aplicación localmente.
 Luego, abre tu navegador y accede a http://localhost:8000 para ver la aplicación en funcionamiento.
 
 ## Demostración
-![image](https://github.com/prodark88/Django_Ecommerce/assets/90015558/2fa0f1bb-56c6-4649-bb44-3b3b7970e51c)
 
 
-
-
+![Captura de pantalla (62)](https://github.com/prodark88/Django_Ecommerce/assets/90015558/25b58f31-3ba9-40fd-91f5-18b914a46637)
+![Captura de pantalla (56)](https://github.com/prodark88/Django_Ecommerce/assets/90015558/f8cc50ed-20d4-4fb1-959b-974016a76edc)
+![Captura de pantalla (58)](https://github.com/prodark88/Django_Ecommerce/assets/90015558/20f360c1-dc84-4027-b75f-3ae179e7f873)
+![Captura de pantalla (59)](https://github.com/prodark88/Django_Ecommerce/assets/90015558/84cacd9f-d3f3-4826-8fc4-af98594b5c59)
+![Captura de pantalla (60)](https://github.com/prodark88/Django_Ecommerce/assets/90015558/357eac44-423a-40cf-b70c-7cf0431e8e13)
+![Captura de pantalla (61)](https://github.com/prodark88/Django_Ecommerce/assets/90015558/a3ec0276-cbae-4b70-97d0-11596e55040d)
+![Captura de pantalla (62)](https://github.com/prodark88/Django_Ecommerce/assets/90015558/a4e289c4-aa32-46cd-8b43-b513853f6f31)
 
 
 ---
